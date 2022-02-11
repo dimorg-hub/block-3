@@ -1,0 +1,55 @@
+mixin post_list 
+	ul.posts__list
+		li.posts__item.posts__item--bottom
+			.posts__inner-image.posts__image--1
+			.posts__content 
+				h3.posts__sub-title The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises
+				.posts__inner-date
+					autor.posts__autor Derek Zimmer
+					date.posts__date |  JUL 25, 2018
+				ul.posts__tags--list
+					li.posts__tags--item 
+						a.posts__tags--link(href="#") Governments
+					li.posts__tags--item , 
+						a.posts__tags--link(href="#") Networking
+					li.posts__tags--item , 
+						a.posts__tags--link(href="#") Open Source
+					li.posts__tags--item , 
+						a.posts__tags--link(href="#") Privacy 
+					li.posts__tags--item , 
+						a.posts__tags--link(href="#") Security
+				a.posts__coments(href="#") 0
+		li.posts__item
+			.posts__inner-image.posts__image--2
+			.posts__content 
+				h3.posts__sub-title How to get cheaper flights using a VPN
+				.posts__inner-date
+					autor.posts__autor Jayson
+					date.posts__date |  JUL 24, 2018
+				ul.posts__tags--list
+					li.posts__tags--item
+						a.posts__tags--link(href="#") Guides
+				a.posts__coments(href="#") 0
+		li.posts__item
+			.posts__inner-image.posts__image--3
+			.posts__content 
+				h3.posts__sub-title Net Neutrality was repealed, but the fight is far from over
+				.posts__inner-date
+					autor.posts__autor Chris Miller
+					date.posts__date |  JUL 22, 2018
+				ul.posts__tags--list
+					li.posts__tags--item
+						a.posts__tags--link(href="#") Governments
+					li.posts__tags--item , 
+						a.posts__tags--link(href="#") Net Neutralit
+					li.posts__tags--item , 
+						a.posts__tags--link(href="#") News
+				a.posts__coments(href="#") 0
+
+mixin posts
+	section.posts
+		.posts__inner 	
+			h2.posts__title Recent posts
+			+post_list
+			+post_list
+			button(type="button").posts__btn older posts
