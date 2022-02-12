@@ -1,6 +1,7 @@
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'RobotoCondensed', sans-serif;
+$font_1: 'RobotoCondensed',
+sans-serif;
 $font_size_base: 1.6rem;
 //---------------------------------------------fonts###
 
@@ -14,11 +15,9 @@ $body_bg: $white;
 //---------------------------------------------colors###
 
 //---------------------------------------------z-index
-$z-index: (
-	popup : 101,
+$z-index: (popup : 101,
 	header : 100,
-	footer : 100
-);
+	footer : 100);
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
@@ -33,7 +32,7 @@ $gl_radius:.5rem;
 //---------------------------------------------media points
 $point_1: 1200px;
 $point_2: 1024px;
-$point_3: 1023px;
+$point_3: 900px;
 $point_4: 768px;
 $point_5: 640px;
 $point_6: 480px;

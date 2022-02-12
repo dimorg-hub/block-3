@@ -2,3 +2,59 @@
 // 	@extend %blue_btn_1;
 // 	@extend %btn_size_1;
 // }
+
+%posts__btn {
+	display: block;
+	width: 16.2rem;
+	margin: 0 auto;
+	padding: .6rem .6rem .8rem;
+
+	color: #4CB649;
+	font-size: 0.8rem;
+	letter-spacing: 0.3px;
+	text-transform: uppercase;
+
+	background-color: #fff;
+	border: 1px solid #4CB649;
+	border-radius: 1.2rem;
+
+	cursor: pointer;
+
+	transform: translate(1.2rem, 0);
+	transition: box-shadow 0.2s, color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.05s;
+	animation: shodow-btn 5s ease-in infinite;
+
+	@include bp ($point_1) {
+		transform: translate(0, 0);
+	}
+
+	@include bp ($point_5) {
+		width: 70%;
+		margin-bottom: 1.8rem;
+	}
+
+	@keyframes shodow-btn {
+		0% {
+			box-shadow: 0 0 1px 0 #4CB649
+		}
+
+		50% {
+			box-shadow: 0 0 .6rem 0 #4CB649
+		}
+
+		100% {
+			box-shadow: 0 0 1px 0 #4CB649
+		}
+	}
+
+	&:hover {
+		color: #81ec7e;
+		border-color: #81ec7e;
+		background-color: #539c51e0;
+	}
+
+	&:active {
+		color: #fff;
+		background-color: #2e572d;
+	}
+}

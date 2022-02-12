@@ -8,7 +8,7 @@
 	padding-top: 2.6rem;
 	margin-bottom: 2.8rem;
 
-	@media (max-width:1024px) {
+	@include bp ($point_3) {
 		margin-bottom: 1.6rem;
 		padding-top: 1.8rem;
 	}
@@ -21,40 +21,59 @@
 	padding: 1.4rem 2rem 1.2rem 2rem;
 	background-color: #F7F7F7;
 
-	@media (max-width:1024px) {
+	@include bp ($point_3) {
 		padding: .6rem;
 	}
 
-	@media (max-width:600px) {
+	@include bp ($point_5) {
 		justify-content: center;
 	}
 }
 
-.header__tags {
-	@media (max-width:600px) {
+.header__inner__tags {
+	display: flex;
+
+	@include bp ($point_5) {
 		display: none;
 	}
 }
 
-.header__tags--title {
+.header__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header__tags__title {
 	display: inline-block;
-	color: #323642;
 	margin-right: 2.8rem;
 
-	@media (max-width:1024px) {
+	color: #323642;
+
+	@include bp ($point_2) {
 		margin-right: 1rem;
 	}
 }
 
+.header__item {
+	&:not(:last-child) {
+		margin-right: 2.4rem;
+
+		@include bp ($point_2) {
+			margin-right: 1rem;
+		}
+	}
+}
+
 .header__nav {
-	@media (max-width:600px) {
+
+	@include bp ($point_5) {
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
 	}
 }
 
-.header__tags--link {
+.header__tags__link {
 	color: #4CB649;
 	transition: text-shadow 0.3s, color 0.3s;
 
@@ -62,15 +81,9 @@
 		color: #fff;
 		text-shadow: 0 0 .6rem #2a6428;
 	}
-
-	&:not(:last-child) {
-		margin-right: 2.4rem;
-
-		@media (max-width:1024px) {
-			margin-right: 1rem;
-		}
-	}
 }
+
+
 
 .header__link {
 	color: #323642;
@@ -82,14 +95,14 @@
 	}
 
 	&:active {
-		text-shadow: 0 0 .8rem rgba(255, 0, 0, 0.664);
 		color: rgb(255, 0, 0);
+		text-shadow: 0 0 .8rem rgba(255, 0, 0, 0.664);
 	}
 
 	&:not(:last-child) {
 		margin-right: 2.6rem;
 
-		@media (max-width:1024px) {
+		@include bp ($point_2) {
 			margin-right: 1.2rem;
 		}
 	}

@@ -17,9 +17,27 @@ mixin aside
 			li.aside__item A Private Net Is Just As Fundamental A Right As Freedom Of Speech
 			li.aside__item Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie
 		a.aside__banner(href="#") 
-			img.aside__img(src="images/banner.jpg", alt="banner")
+			+picture({
+				typeJpeg: false,
+				png: false,
+				media: 100,
+				is2x: false,
+				contain: true,
+				class: 'aside__img',
+				img: `banner`,
+				img_mob: `banner`
+			})
 		.aside__tags 
 			h4.aside__tags__title Tag cloud
 			.aside__tags__tag
 				a.aside__banner(href="#") 
-					img.aside__img(src="images/tag-scrren.png", alt="tags")
+					+picture({
+						typeJpeg: false,
+						png: true,
+						media: 1024,
+						is2x: false,
+						contain: true,
+						class: 'aside__img',
+						img: `tag__scrren`,
+						img_mob: `tag__scrren`
+					})

@@ -5,3 +5,78 @@
 .form_input__element {
 	@extend %form_el_default;
 }
+
+%aside__label {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 1px;
+		left: 1.2rem;
+		width: 1rem;
+		height: 1rem;
+
+		background-image: url(../images/icons/search.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		cursor: pointer;
+
+		@include bp ($point_1) {
+			top: -4px;
+		}
+
+		@include bp ($point_3) {
+			left: .6rem;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+
+		@include bp ($point_6) {
+			top: .4rem;
+		}
+	}
+}
+
+
+%aside__input {
+	position: relative;
+	width: 100%;
+	padding: 1rem .6rem 1rem 3.4rem;
+	margin-bottom: 1.8rem;
+
+	font-size: 1.2rem;
+	font-weight: 300;
+
+	border: 1px solid #D7D8D9;
+	border-radius: 4px;
+
+	cursor: pointer;
+	transition: box-shadow 0.3s, border-radius 0.3s;
+
+	@include bp ($point_1) {
+		padding: .8rem .4rem .8rem 2.8rem;
+		margin-bottom: 1.4rem;
+
+		font-size: 1rem;
+	}
+
+	@include bp ($point_6) {
+		padding: .8rem .4rem .8rem 2.2rem;
+	}
+
+	&:hover {
+		border-radius: .6rem;
+		box-shadow: 0px 2px 5px 0 #cc895ca9;
+	}
+
+	&:focus {
+		border-radius: .6rem;
+		box-shadow: 0 3px .6rem 0 #cc895c;
+	}
+
+	&::placeholder {
+		color: #22252E;
+	}
+}
